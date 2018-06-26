@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 import MainScreen from './MainScreen'
-import ChatScreen from './ChatScreen'
+import ChatContainer from './ChatContainer'
 
 const MainTab = createBottomTabNavigator({
     Main: {
@@ -20,7 +20,7 @@ const MainTab = createBottomTabNavigator({
         }
     },
     Chat: {
-        screen: ChatScreen,
+        screen: ChatContainer,
         navigationOptions: {
             tabBarLabel: "채팅",
             tabBarIcon: ({ focused }) => {

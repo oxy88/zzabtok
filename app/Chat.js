@@ -9,12 +9,12 @@ class Chat extends React.Component {
                 }}>
                     <Text style={{
                         fontSize: 24
-                    }}>채팅쓴사람</Text>
+                    }}>{this.props.message.user.name}</Text>
                 </View>
                 <View style={{                   
                     marginTop: 8
                 }}>
-                    <Text>쓸데없는 채팅들</Text>
+                    <Text>{this.props.message.text}</Text>
                 </View>          
             </View>    
         )

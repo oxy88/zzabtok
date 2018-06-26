@@ -1,0 +1,15 @@
+# import User, Message, MessageSubscriptionPayload from "./generated/prisma.graphql"
+
+type Query {
+  messages: [Message!]!
+  myName: String
+}
+
+type Mutation {
+  login(name: String): String
+  sendMessage(text: String): Message  
+}
+
+type Subscription {
+  messageSubscription: MessageSubscriptionPayload
+}
