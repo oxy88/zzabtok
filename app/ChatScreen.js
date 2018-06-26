@@ -1,11 +1,16 @@
 import React from 'react'
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import { View, ScrollView, Text, TextInput, TouchableOpacity } from 'react-native'
+import Chat from './Chat'
 
 class ChatScreen extends React.Component {
     render() {
         return (
             <View style={{marginTop: 56, justifyContent: "space-between", flex: 1}}>
-                <Text>채팅이 들어갈 곳</Text>
+                <ScrollView style={{margin: 16}}>
+                {[0, 1, 2, 3].map(num => {
+                    return <Chat key={num}/>
+                })}                                          
+                </ScrollView>
                 <View style={{
                     flexDirection: "row",
                     marginBottom: 16,

@@ -1,5 +1,6 @@
 import React from 'react'
 import { TouchableOpacity, Button, Text, View, TextInput } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 class LoginScreen extends React.Component {
     render() {
@@ -10,6 +11,23 @@ class LoginScreen extends React.Component {
                 alignItems: "center"
             }}>
                 <View style={{
+                    position: 'absolute',
+                    top: 55,
+                    left: 16,
+                    right: 16,
+                    bottom: 400,
+                    borderRadius: 51,
+                    backgroundColor: "#00ff2f",
+                    justifyContent: "center"
+                }}>
+                    <Text style={{
+                        textAlign: "center",
+                        textAlignVertical: "center",
+                        fontSize: 56,
+                        color: "#000000"
+                    }}>짭 카 오 톡</Text>
+                </View>
+                <View style={{
                     flexDirection: "row",
                     alignItems: "center"
                 }}>
@@ -19,12 +37,12 @@ class LoginScreen extends React.Component {
                     }} />
                     <TouchableOpacity style={{
                         marginRight: 16,
-                        backgroundColor: '#d8d8d8',
+                        backgroundColor: '#0014ff',
                         padding: 16
                         }} onPress={() => {
                         this.props.navigation.navigate('MainTab')
                     }}>
-                        <Text>로그인 버튼</Text>
+                        <Text style={{color: "#ffffff" }}>로그인 버튼</Text>
                     </TouchableOpacity>
                 </View>
             </View>
